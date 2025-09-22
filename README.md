@@ -31,6 +31,7 @@ Exemplo de saída:
   "max": 100,
   "generatedAt": "2025-09-20T15:39:01.335Z"
 }
+```
 
 ## Instalação
 1. Clonar Repositório
