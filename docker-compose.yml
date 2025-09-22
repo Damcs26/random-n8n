@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=n8n
+      - DB_POSTGRESDB_DATABASE=n8n
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+      - ./custom_nodes:/home/node/.n8n/custom
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=n8n
+      - POSTGRES_PASSWORD=n8n
+      - POSTGRES_DB=n8n
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped

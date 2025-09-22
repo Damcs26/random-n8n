@@ -1,0 +1,23 @@
+{
+  "name": "n8n-nodes-random-number",
+  "version": "1.0.0",
+  "description": "Custom n8n node to generate random numbers",
+  "keywords": [
+    "n8n-community-node",
+    "random",
+    "generator"
+  ],
+  "license": "MIT",
+  "main": "RandomNumber.node.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "n8n-core": "^1.14.1",
+    "n8n-workflow": "^1.82.0"
+  }
+}
