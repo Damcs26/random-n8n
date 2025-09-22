@@ -70,7 +70,8 @@ Dentro da pasta do custom node:
 5. Testes
 
 ```terminal
-npm run test
+  npm run test
+```
 
 Reinicie o n8n e o node estará disponível na interface.
 
