@@ -66,12 +66,11 @@ Dentro da pasta do custom node:
   cd custom_nodes/n8n-nodes-random-number
   npm install
   npm run build
-``
+```
 5. Testes
 
 ```terminal
 npm run test
-```
 
 Reinicie o n8n e o node estará disponível na interface.
 
