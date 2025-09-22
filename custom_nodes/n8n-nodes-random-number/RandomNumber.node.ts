@@ -16,7 +16,7 @@ export class RandomNumber implements INodeType {
     defaults: {
       name: 'Random Number',
     },
-    icon: 'file:assets/RandomNumber.svg', // caminho atualizado
+    icon: 'file:assets/RandomNumber.svg',
     inputs: [{ type: NodeConnectionType.Main }],
     outputs: [{ type: NodeConnectionType.Main }],
     properties: [
@@ -44,7 +44,6 @@ export class RandomNumber implements INodeType {
   for (let i = 0; i < items.length; i++) {
     const min = this.getNodeParameter('min', i) as number;
     const max = this.getNodeParameter('max', i) as number;
-    /*Conexão com API Random*/
     const response = await this.helpers.httpRequest({
       method: 'GET',
       url: `https://www.random.org/integers/?num=1&min=${min}&max=${max}&col=1&base=10&format=plain&rnd=new`,
