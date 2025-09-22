@@ -11,12 +11,12 @@
 
 ---
 
-## 📌 Descrição
-Este projeto é um **Custom Node para o n8n**, que gera um número aleatório entre um valor mínimo 1 e máximo 100API oficial do **Random.org**.
+## 🤖 Descrição
+Este projeto é um **Custom Node para o n8n**, que gera um número aleatório entre um valor mínimo 1 e máximo 100 utilizando a API oficial do **Random.org**.
 
 ---
 
-## 🚀 Funcionalidades
+## ✔️ Funcionalidades
 - Operação única: **True Random Number Generator**  
 - Parâmetros de entrada:
   - `Min` → valor mínimo - inteiro
@@ -33,7 +33,7 @@ Exemplo de saída:
 }
 ```
 
-## Instalação
+## ⚙️ Instalação
 1. Clonar Repositório
 ```terminal
   git clone https://github.com/SEU-USUARIO/random-n8n.git
