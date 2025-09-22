@@ -12,15 +12,15 @@
 ---
 
 ## 📌 Descrição
-Este projeto implementa um **Custom Node para o n8n**, que gera um número aleatório entre um valor mínimo e máximo informados, utilizando a API oficial do **Random.org**.
+Este projeto é um **Custom Node para o n8n**, que gera um número aleatório entre um valor mínimo 1 e máximo 100API oficial do **Random.org**.
 
 ---
 
 ## 🚀 Funcionalidades
 - Operação única: **True Random Number Generator**  
 - Parâmetros de entrada:
-  - `Min` → valor mínimo (inteiro, incluso)
-  - `Max` → valor máximo (inteiro, incluso)  
+  - `Min` → valor mínimo - inteiro
+  - `Max` → valor máximo - inteiro
 - Saída: JSON contendo número gerado, limites e timestamp.  
 
 Exemplo de saída:
@@ -35,25 +35,43 @@ Exemplo de saída:
 
 ## Instalação
 1. Clonar Repositório
-git clone https://github.com/SEU-USUARIO/random-n8n.git
-cd random-n8n
+```terminal
+  git clone https://github.com/SEU-USUARIO/random-n8n.git
+  cd random-n8n
+```
 
 2. Subir o ambiente com Docker
-docker compose up -d
-O n8n estará disponível em:
-👉 http://localhost:5678
+```terminal
+  docker-compose up -d
+  O n8n estará disponível em:
+```
+2.1 Caso já tenha arquivo aberto
+```terminal
+  docker-compose down
+  docker-compose up -d
+```
+O N8N estará disponível no endereço
+http://localhost:5678
 
 3. Instalar o Custom Node
 Copie a pasta do node para o diretório .n8n/custom/:
-cp -r custom_nodes/n8n-nodes-random-number ~/.n8n/custom/
+```terminal
+ cp -r custom_nodes/n8n-nodes-random-number ~/.n8n/custom/
+```
 
 4. Build do node
 Dentro da pasta do custom node:
 
-cd custom_nodes/n8n-nodes-random-number
-npm install
-npm run build
+```terminal
+  cd custom_nodes/n8n-nodes-random-number
+  npm install
+  npm run build
+``
+5. Testes
 
+```terminal
+npm run test
+```
 
 Reinicie o n8n e o node estará disponível na interface.
 
